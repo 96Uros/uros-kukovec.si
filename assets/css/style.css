@@ -192,9 +192,21 @@ body {
   }
 
   .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
     margin-top: 1rem;
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .contact-separator {
+    display: none;
+  }
+
+  .contact a[href^="tel:"] {
+    white-space: nowrap;
   }
 }
 
