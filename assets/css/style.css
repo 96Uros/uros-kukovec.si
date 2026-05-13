@@ -81,6 +81,16 @@ body {
   text-align: center;
 }
 
+.role {
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #a8c4e8;
+  text-align: center;
+}
+
 .company-type {
   font-size: 0.45em;
   font-weight: 700;
@@ -148,6 +158,11 @@ body {
 
   .name {
     font-size: 3.8rem;
+  }
+
+  .role {
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
   }
 
   .subtitle {
