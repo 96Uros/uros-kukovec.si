@@ -6,17 +6,16 @@
     <link
       rel="icon"
       type="image/png"
-      href="assets/favicon/favicon-96x96.png"
+      href="/assets/favicon/favicon-96x96.png"
       sizes="96x96"
     />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
+      href="/assets/favicon/apple-touch-icon.png"
     />
-    <!-- <link rel="manifest" href="assets/favicon/site.webmanifest" /> -->
     <title>Uroš Kukovec s.p., računalniško programiranje in 3D tisk</title>
     <meta
       name="description"
@@ -27,14 +26,19 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sl_SI" />
     <meta property="og:url" content="https://uros-kukovec.si/" />
-    <meta property="og:title" content="Uroš Kukovec s.p., računalniško programiranje in 3D tisk" />
-    
+    <meta
+      property="og:title"
+      content="Uroš Kukovec s.p., računalniško programiranje in 3D tisk"
+    />
     <meta
       property="og:description"
-      content="Uroš Kukovec s.p.,računalniško programiranje in 3D tisk. Kontakt po telefonu in e-pošti."
+      content="Uroš Kukovec s.p., računalniško programiranje in 3D tisk. Kontakt po telefonu in e-pošti."
     />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Uroš Kukovec s.p., računalniško programiranje in 3D tisk" />
+    <meta
+      name="twitter:title"
+      content="Uroš Kukovec s.p., računalniško programiranje in 3D tisk"
+    />
     <meta
       name="twitter:description"
       content="Uroš Kukovec s.p., računalniško programiranje in 3D tisk. Kontakt po telefonu in e-pošti."
@@ -56,47 +60,9 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body>
-    <video class="background-video" autoplay muted loop playsinline>
-      <source src="assets/videos/bg1.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay"></div>
-    <div class="starfield" aria-hidden="true"></div>
-
-    <div class="container">
-      <div class="content">
-        <h1 class="name">UROŠ KUKOVEC S.P</h1>
-        <br />
-        <p class="subtitle">OD IDEJE DO DIGITALNE IZKUŠNJE.</p>
-        <p class="contact">
-          <a href="mailto:uros-kukovec@outlook.com">uros-kukovec@outlook.com</a>
-          <span class="contact-separator"> | </span>
-          <a href="tel:+38640325711">+386 40 325 711</a>
-        </p>
-      </div>
-    </div>
-    <p class="service-line bottom-service-line">
-      Uroš Kukovec s.p., računalniško programiranje in 3D tisk
-    </p>
-    <script>
-      const starfield = document.querySelector(".starfield");
-      if (starfield) {
-        const starsCount = 70;
-        for (let i = 0; i < starsCount; i += 1) {
-          const star = document.createElement("span");
-          star.className = "star";
-          star.style.left = `${Math.random() * 100}%`;
-          star.style.top = `${Math.random() * 100}%`;
-          star.style.width = `${Math.random() * 2 + 1}px`;
-          star.style.height = star.style.width;
-          star.style.animationDelay = `${Math.random() * 4}s`;
-          star.style.animationDuration = `${2 + Math.random() * 3}s`;
-          starfield.appendChild(star);
-        }
-      }
-    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
