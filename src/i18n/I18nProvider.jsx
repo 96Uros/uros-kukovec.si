@@ -10,7 +10,7 @@ const I18nContext = createContext(null);
 export function I18nProvider({ children }) {
   const [locale, setLocale] = useState(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return saved === "en" || saved === "sl" ? saved : "sl";
+    return saved === "en" || saved === "sl" ? saved : "en";
   });
 
   const t = locales[locale];
