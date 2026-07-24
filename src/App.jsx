@@ -1,12 +1,14 @@
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { Starfield } from "./components/Starfield";
 import { useI18n } from "./i18n/I18nProvider";
+import Cursor from "./components/Cursor";
 
 export function App() {
   const { t } = useI18n();
 
   return (
     <>
+      <Cursor />
       <video className="background-video" autoPlay muted loop playsInline>
         <source src="/assets/videos/bg1.mp4" type="video/mp4" />
       </video>
