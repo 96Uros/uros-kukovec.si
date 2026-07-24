@@ -7,7 +7,6 @@ const LINE_WIDTH = 4;
 function drawTrail(ctx, trail, now) {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   ctx.lineWidth = LINE_WIDTH;
-  ctx.lineCap = "round";
   ctx.lineJoin = "round";
 
   for (let i = 1; i < trail.length; i += 1) {
@@ -22,6 +21,7 @@ function drawTrail(ctx, trail, now) {
     const alpha = 1 - age / TRAIL_LIFETIME;
 
     ctx.beginPath();
+    ctx.lineCap = i === trail.length - 1 ? "round" : "butt";
     ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
     ctx.moveTo(prev.x, prev.y);
     ctx.lineTo(curr.x, curr.y);
